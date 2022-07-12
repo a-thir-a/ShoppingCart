@@ -1,0 +1,19 @@
+<div class="topnav">
+  <div class="icon">
+    <i class="fa fa-angle-left" style="font-size:24px"></i>
+    <span>UNI Resto Cafe</span>
+  </div>
+  <div class="spaced">
+    <a aria-label="My Orders"  title="My Orders">
+         My Orders
+    </a>
+    <div class="cart">
+      <i class="fa fa-shopping-cart" style="font-size:24px"></i>
+    <span class='badge badge-warning' id='lblCartCount'>{{newCount}}</span>
+    </div>
+    
+  </div>
+</div>
+<app-categories (newItemEvent)="count($event)"></app-categories>
+
+

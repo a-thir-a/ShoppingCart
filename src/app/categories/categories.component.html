@@ -1,0 +1,43 @@
+<div class="outer">
+    <mat-tab-group>
+  <mat-tab
+    *ngFor="let cat of categoryList; let index = index"
+    class="tab-title" (click)=" addCount(index)"
+  >
+    <ng-template mat-tab-label>{{ cat.menu_category }}</ng-template>
+    <mat-list>
+      <mat-list-item
+        *ngFor="
+          let item of categoryList[index].category_dishes;
+          let index = index
+        "
+      >
+        <div class="card row" >
+        <div class="col-lg-4">
+            {{ item.dish_name }}
+            <br />
+            {{ item.dish_currency }} {{ item.dish_price }}
+            <br/>
+            {{item.dish_description}}
+        </div>
+          
+          <div class="cal col-lg-4">
+            {{ item.dish_calories }} calories
+            <img src="/assets/dishes.jpg" width="30" height="30" />
+          </div>
+          <div *ngIf="item.addonCat!=''" class="col-lg-1">
+            Customizations Available
+          </div>
+          <div class=" col-lg-2">
+            <button class="btn" (click)="minus(index)" ><i class=" fa fa-minus-circle"></i></button>
+<span>{{item.key}}</span>
+            <button class="btn" (click)="plus(index)"><i class="fa fa-plus-circle"></i></button>
+          </div>   
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-tab>
+</mat-tab-group>
+
+
+</div>

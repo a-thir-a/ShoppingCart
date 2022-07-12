@@ -1,0 +1,56 @@
+.outer{
+
+height: 100%; 
+.tab {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option{
+    height: auto !important;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 14px;
+    width:100%;
+    input{
+        width: 20px;
+    }
+  .cal{
+    display: flex;
+    font-family: monospace;
+
+  }
+}
+}
